@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="javascript:void(0);" routerLink="/" *ngIf="receivedname">Welcome {{receivedname}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <!-- Not Authenticated -->
+      <ng-container *ngIf="!auth.isAuthenticated() && !auth.adminAuthenticated()">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/adminregister">Admin Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/adminlogin">Admin Login</a>
+        </li>
+      </ng-container>
+  
+      <!-- Admin Authenticated -->
+      <ng-container *ngIf="auth.adminAuthenticated()">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/createproduct">Create Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/productdetails"> Products Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/adminvieworders">Order Placed</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" (click)="adminlogout()" >Logout</a>
+        </li>
+      </ng-container>
+  
+      <!-- Normal User Authenticated -->
+      <ng-container *ngIf="auth.isAuthenticated() ">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/cart">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" routerLink="/order">Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0);" (click)="logout()">Logout</a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  
+</nav>

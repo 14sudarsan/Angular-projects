@@ -1,0 +1,64 @@
+
+<app-navbar></app-navbar>
+<div class="create-product-form">
+    <form (ngSubmit)="creatingproducts()">
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="enter valid admin emailID" [(ngModel)]="productdetails.email" name="email" required />
+      </div>
+  
+      <div>
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" [(ngModel)]="productdetails.name" name="name" required />
+      </div>
+  
+      <div>
+        <label for="price">Price:</label>
+        <input type="number" id="price" [(ngModel)]="productdetails.price" name="price" required />
+      </div>
+  
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="productdetails.description" name="description" required></textarea>
+      </div>
+  
+      <div>
+        <label for="ratings">Ratings:</label>
+        <input type="number" id="ratings" [(ngModel)]="productdetails.ratings" name="ratings" step="0.1" min="0" max="5" />
+      </div>
+  
+      <div>
+        <label for="images">Images (Comma Separated URLs):</label>
+        <input
+          type="text"
+          id="images"
+          [(ngModel)]="productdetails.images[0].image"
+          name="images"
+          placeholder="Enter image URL"
+        />
+      </div>
+  
+      <div>
+        <label for="category">Category:</label>
+        <input type="text" id="category" [(ngModel)]="productdetails.category" name="category" required />
+      </div>
+  
+      <div>
+        <label for="seller">Seller:</label>
+        <input type="text" id="seller" [(ngModel)]="productdetails.seller" name="seller" required />
+      </div>
+  
+      <div>
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" [(ngModel)]="productdetails.stock" name="stock" required />
+      </div>
+  
+      <div>
+        <label for="numofReviews">Number of Reviews:</label>
+        <input type="number" id="numofReviews" [(ngModel)]="productdetails.numofReviews" name="numofReviews" />
+      </div>
+  
+      <button type="submit">Create Product</button>
+    </form>
+  </div>
+  

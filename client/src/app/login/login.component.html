@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<section class="login-block">
+    <div class="container">
+        <div class="row">
+            <div class="col login-sec">
+                <h2 class="text-center">Login Now</h2>
+                <form class="login-form" action="" novalidate  #f="ngForm"   (ngSubmit)="f.form.valid && onSubmit()">
+                    <div class="form-group">
+                        <label for="email" class="text-uppercase">Email</label>
+                        <input type="email" class="form-control" name="email" id="email"  [(ngModel)]="formdata.email" #name="ngModel" placeholder="Email" required>
+                        <span class="text-danger" id="email-error">Email is required.</span>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="password" class="text-uppercase">Password</label>
+                        <input class="form-control" type="password" name="password" id="password"  [(ngModel)]="formdata.password"  #email="ngModel" placeholder="Password" required>
+                        <span class="text-danger" id="password-error">Password is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <div class="text-center" id="loading-spinner" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <span class="text-danger" id="error-message"></span>
+                        <input type="submit" class="btn btn-login float-right" value="Login"   (click) = "submit=true"  id="submit-btn">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        Create a new account? Please <a href="javascript:void(0);" routerLink="/register">Register</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>

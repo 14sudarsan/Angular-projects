@@ -1,0 +1,98 @@
+[
+    {
+      "name": "Wireless Headphones",
+      "price": "59.99",
+      "description": "High-quality wireless headphones with noise cancellation.",
+      "ratings": "4.5",
+      "images": [
+        {
+          "image": "https://example.com/images/headphones1.jpg"
+        },
+        {
+          "image": "https://example.com/images/headphones2.jpg"
+        }
+      ],
+      "category": "Electronics",
+      "seller": "TechStore",
+      "stock": "150",
+      "numofReviews": "85",
+      "createdAt": "2025-01-12T10:30:00Z"
+    },
+    {
+      "name": "Smartphone",
+      "price": "699.99",
+      "description": "Latest smartphone with advanced features and powerful performance.",
+      "ratings": "4.7",
+      "images": [
+        {
+          "image": "https://example.com/images/smartphone1.jpg"
+        },
+        {
+          "image": "https://example.com/images/smartphone2.jpg"
+        }
+      ],
+      "category": "Electronics",
+      "seller": "MobileHub",
+      "stock": "80",
+      "numofReviews": "120",
+      "createdAt": "2025-01-10T15:00:00Z"
+    },
+    {
+      "name": "Running Shoes",
+      "price": "49.99",
+      "description": "Comfortable and durable running shoes for everyday fitness.",
+      "ratings": "4.3",
+      "images": [
+        {
+          "image": "https://example.com/images/shoes1.jpg"
+        },
+        {
+          "image": "https://example.com/images/shoes2.jpg"
+        }
+      ],
+      "category": "Footwear",
+      "seller": "SportsGear",
+      "stock": "200",
+      "numofReviews": "60",
+      "createdAt": "2025-01-05T12:00:00Z"
+    },
+    {
+      "name": "Gaming Keyboard",
+      "price": "89.99",
+      "description": "RGB mechanical gaming keyboard with customizable keys.",
+      "ratings": "4.6",
+      "images": [
+        {
+          "image": "https://example.com/images/keyboard1.jpg"
+        },
+        {
+          "image": "https://example.com/images/keyboard2.jpg"
+        }
+      ],
+      "category": "Accessories",
+      "seller": "GamerZone",
+      "stock": "60",
+      "numofReviews": "45",
+      "createdAt": "2025-01-02T08:30:00Z"
+    },
+    {
+      "name": "Coffee Maker",
+      "price": "39.99",
+      "description": "Compact and efficient coffee maker for home and office use.",
+      "ratings": "4.2",
+      "images": [
+        {
+          "image": "https://example.com/images/coffeemaker1.jpg"
+        },
+        {
+          "image": "https://example.com/images/coffeemaker2.jpg"
+        }
+      ],
+      "category": "Home Appliances",
+      "seller": "HomeEssentials",
+      "stock": "90",
+      "numofReviews": "30",
+      "createdAt": "2025-01-09T14:20:00Z"
+    }
+  ]
+  

@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="products-container">
+    <h2>Admin Product Dashboard</h2>
+    <div *ngFor="let product of createdproducts" class="product-card">
+      <!-- Product Image Section -->
+      <div class="product-images">
+        <img [src]="product.images[0]?.image" alt="Product Image" />
+      </div>
+  
+      <!-- Product Info Section -->
+      <div class="product-info">
+        <h3>{{ product.name }}</h3>
+        <p><strong>Email:</strong> {{ product.email }}</p>
+        <p><strong>Description:</strong> {{ product.description }}</p>
+        <p><strong>Category:</strong> {{ product.category }}</p>
+        <p><strong>Seller:</strong> {{ product.seller }}</p>
+        <p class="price">${{ product.price }}</p>
+        <p class="ratings">Rating: {{ product.ratings }} / 5</p>
+      </div>
+  
+      <!-- Product Details Section -->
+      <div class="product-details">
+        <p><strong>Stock:</strong> {{ product.stock }}</p>
+        <p><strong>Number of Reviews:</strong> {{ product.numofReviews }}</p>
+      </div>
+  
+      <!-- Product Actions -->
+      <div class="product-actions">
+        <button>Edit</button>
+        <button>Delete</button>
+        <p class="stock-status">In Stock</p>
+      </div>
+    </div>
+  </div>
+  
+  

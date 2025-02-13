@@ -1,0 +1,105 @@
+
+<app-navbar></app-navbar>
+<main role="main" class="container mt-5">
+  <div class="container">
+    <div class="text-center mt-5">
+      <h3>Welcome to Cart , Place the Order</h3>
+
+      <!-- User greeting section -->
+      <p class="welcome-message">Hi, User</p>
+
+      <!-- Search Box -->
+      <div class="search-box">
+        <input
+          type="text"
+          placeholder="Search products..."
+          class="form-control search-input mb-3"
+        />
+        <button class="btn btn-primary search-btn">Search</button><br>
+
+        <button class="btn btn-primary"  style="margin-left: 20px;" (click)="openPopup()">Confirm Order</button>
+
+        
+        
+      </div>
+
+      
+
+      <!-- Cart Section -->
+      <div *ngIf="cartItems.length > 0; else noCartMessage" class="cart-section">
+        <h2>Your Cart</h2>
+        <div class="cart-items">
+          <div *ngFor="let item of cartItems" class="cart-item">
+            <div class="cart-item-info">
+              <h4 class="cart-item-name">{{ item.name }}</h4>
+              <p class="cart-item-description">{{ item.description }}</p>
+              <p class="cart-item-price">Price: {{ item.price | currency }}</p>
+              <p class="cart-item-quantity">Quantity: {{ item.quantity }}</p>
+
+              <button class="btn btn-danger" (click)="removeproductfromcart(item.productId)">Delete</button><br>
+              
+             
+
+        
+                
+            </div>
+          </div>
+
+          <h1>Total {{totalprice}}</h1>
+        </div>
+      </div>
+      <!-- Popup Modal -->
+      <div
+      class="modal-overlay"
+      [ngStyle]="{ display: isPopupVisible ? 'flex' : 'none' }"
+      (click)="closePopup()"
+    >
+      <div class="modal-content animate-modal" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirm Order</h5>
+          <button class="close-btn" (click)="closePopup()">&#x2715;</button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to place the order?</p>
+    
+          <!-- Address Input -->
+          <div class="address-section">
+            <label for="address">Enter your address:</label>
+            <textarea
+              id="address"
+              [(ngModel)]="userAddress"
+              class="form-control"
+              placeholder="Enter your delivery address"
+              rows="3"
+            ></textarea>
+            <textarea
+            id="address"
+            [(ngModel)]="phonenumber"
+            class="form-control"
+            placeholder="Enter phone number"
+            rows="3"
+          ></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" (click)="closePopup()">Cancel</button>
+          <button
+            class="btn btn-primary"
+            (click)="placeOrder(userAddress,phonenumber)"
+          >
+            Yes
+          </button>
+        </div>
+      </div>
+    </div>
+    
+
+
+      <ng-template #noCartMessage>
+        <p class="empty-cart-message">Your cart is empty.</p>
+      </ng-template>
+    </div>
+  </div>
+</main>
+
+  

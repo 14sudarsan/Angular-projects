@@ -1,0 +1,73 @@
+<app-navbar></app-navbar>
+<div class="admin-login-container">
+    <form (ngSubmit)="OnSubmit()" class="admin-login-form" #loginForm="ngForm">
+      <h2 class="form-title">Admin Login</h2>
+  
+      <!-- Name Input -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="adminData.name"
+          required
+          class="form-input"
+          placeholder="Enter your name"
+          #name="ngModel"
+        />
+        <div *ngIf="name.invalid && name.touched" class="error-message">
+          Name is required.
+        </div>
+      </div>
+  
+      <!-- Email Input -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="adminData.email"
+          required
+          email
+          class="form-input"
+          placeholder="Enter your email"
+          #email="ngModel"
+        />
+        <div *ngIf="email.invalid && email.touched" class="error-message">
+          Valid email is required.
+        </div>
+      </div>
+  
+      <!-- Password Input -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="adminData.password"
+          required
+          minlength="6"
+          class="form-input"
+          placeholder="Enter your password"
+          #password="ngModel"
+        />
+        <div *ngIf="password.invalid && password.touched" class="error-message">
+          Password must be at least 6 characters.
+        </div>
+      </div>
+  
+      <!-- Error Message -->
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="loginForm.invalid" class="submit-button">
+        Login
+      </button>
+    </form>
+  </div>
+  

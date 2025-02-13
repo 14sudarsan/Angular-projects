@@ -1,0 +1,230 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Welcome Section */
+.welcome-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.welcome-message {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 30px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.search-input {
+    width: 60%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 2px solid #bdc3c7;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5);
+}
+
+.search-btn {
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Orders Section */
+.orders-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.orders-header {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.order-group {
+    margin-top: 20px;
+}
+
+.order-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.5s ease-in-out;
+    border-left: 5px solid #007bff; /* Decorative border */
+    margin-bottom: 30px; /* Space between orders */
+}
+
+.order-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.order-header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.ordered-address {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Reduced width */
+    height: auto; /* Height adjusts based on content */
+    min-height: 100px; /* Ensures it looks like a box */
+    margin-left: auto; /* Center alignment */
+    margin-right: auto;
+}
+
+.ordered-address p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.cart-items {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 70%; /* Reduced width */
+    height: auto; /* Height adjusts based on content */
+    min-height: 150px; /* Ensures it looks like a box */
+    margin-left: auto; /* Center alignment */
+    margin-right: auto;
+}
+.cart-items h4 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.list-group-item {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Total Price Section */
+.total-price {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+    text-align: right;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* No Orders Message */
+.empty-orders-message {
+    font-size: 1.5rem;
+    color: #777;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
